@@ -13,3 +13,16 @@ function nowServing (katzDeliLine) {
   name = katzDeliLine.shift()
   return "Currently serving "+ name +".";
 }
+
+function currentLine(line) {
+if (katzDeliLine.length === 0) {
+  return "The line is currently empty.";
+}
+
+var deliString = `The line is currently: 1. ${katzDeliLine[0]}`
+
+for(let i = 1; i<katzDeliLine.length;i++) {
+  deliString += `,${i+1}. ${katzDeliLine[i]}`
+}
+return deliString
+}
